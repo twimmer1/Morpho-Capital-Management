@@ -1,0 +1,26 @@
+<h1>Listing Holdings</h1>
+
+<%= link_to 'New Holding', new_holding_path %>
+
+
+<table>
+	<tr>
+		<th>Address</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip</th>
+		<th>Description</th>
+	</tr>
+
+<% @holdings.each do |holding| %>
+	<tr>
+		<td><%= holding.address %></td>
+		<td><%= holding.city %></td>
+		<td><%= holding.state %></td>
+		<td><%= holding.zip %></td>
+		<td><%= holding.description %></td>
+		<td><%= link_to 'Show', holding_path(holding) %></td>
+		<td><%= link_to 'Edit', edit_holding_path(holding) %></td>
+		<td><%= link_to 'Delete', holding_path(holding), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %></td>
+<% end %>
+</table>

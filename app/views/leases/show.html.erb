@@ -1,0 +1,34 @@
+<p>
+	<strong>Lease Holding address:</strong>
+	<%= @lease.holding.address %>
+</p>
+
+<p>
+	<strong>Rent:</strong>
+	<%= @lease.rent %>
+</p>
+
+<p>
+	<strong>Start Date:</strong>
+	<%= @lease.start_date %>
+</p>
+
+<p>
+	<strong>End Date:</strong>
+	<%= @lease.end_date %>
+</p>
+
+<p>
+	<strong>Security Deposit:</strong>
+	<%= @lease.security_deposit %>
+</p>
+
+<p>
+	<strong>Conditions:</strong>
+	<%= @lease.conditions %>
+</p>
+
+
+
+<%= link_to 'Back', leases_path %>
+<%= link_to 'Edit', edit_lease_path(@lease) %>

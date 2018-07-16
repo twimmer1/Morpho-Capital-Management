@@ -1,0 +1,45 @@
+<%= form_with model: @holding, local: true do |form| %>
+
+<% if @holding.errors.any? %>
+<div id="error_explanation">
+  <h2>
+    <%= pluralize(@holding.errors.count, "error") %> prohibited
+    this holding from being saved:
+  </h2>
+  <ul>
+    <% @holding.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<p>
+  <%= form.label :address %><br>
+  <%= form.text_field :address %>
+</p>
+
+<p>
+  <%= form.label :city %><br>
+  <%= form.text_field :city %>
+</p>
+
+<p>
+  <%= form.label :state %><br>
+  <%= form.text_field :state %>
+</p>
+
+<p>
+  <%= form.label :zip %><br>
+  <%= form.text_field :zip %>
+</p>
+
+<p>
+  <%= form.label :description %><br>
+  <%= form.text_area :description %>
+</p>
+
+<p>
+  <%= form.submit %>
+</p>
+<% end %>

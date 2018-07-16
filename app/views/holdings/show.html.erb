@@ -1,0 +1,41 @@
+<p>
+	<strong>Address:</strong>
+	<%= @holding.address %>
+</p>
+
+<p>
+	<strong>City:</strong>
+	<%= @holding.city %>
+</p>
+
+<p>
+	<strong>State:</strong>
+	<%= @holding.state %>
+</p>
+
+<p>
+	<strong>Zip:</strong>
+	<%= @holding.zip %>
+</p>
+
+<p>
+	<strong>Description:</strong>
+	<%= @holding.description %>
+</p>
+
+<h2> Lease this Property: </h2>
+
+<%= render 'leases/form' %>
+
+<%= link_to 'Back', holdings_path %>
+<%= link_to 'Edit', edit_holding_path(@holding) %>
+
+This place is worth $ <%= params[:zestimate] %>
+
+<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=<%=Rails.configuration.maps.api_key%>
+    &q=<%=@holding.address.gsub(' ', '+')%>" allowfullscreen>
+</iframe>
