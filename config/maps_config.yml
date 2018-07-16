@@ -1,0 +1,8 @@
+development:
+  :api_key: 'AIzaSyCp_ynhvkZdp7s55Ab9ZeVoAjb5E5eI3dA'
+  :zil_key: 'X1-ZWz18gsretv2tn_35s1w'
+  :zurl: 'http://www.zillow.com/webservice/GetSearchResults.htm'
+production:
+  :api_key: 'AIzaSyCp_ynhvkZdp7s55Ab9ZeVoAjb5E5eI3dA'
+  :zil_key: 'X1-ZWz18gsretv2tn_35s1w'
+  :zurl: 'http://www.zillow.com/webservice/GetSearchResults.htm'
